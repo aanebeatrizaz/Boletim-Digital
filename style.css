@@ -1,0 +1,127 @@
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== CORPO DA PÁGINA ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffff; /* fundo branco puro */
+  color: #1a1a1a;            /* texto quase preto */
+  padding: 20px;
+  line-height: 1.5;
+}
+
+/* ===== CABEÇALHO ===== */
+.cabecalho {
+  background-color: #1a1a1a; /* preto/cinza-escuro */
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.cabecalho h1 {
+  font-size: 1.8rem;
+  margin-bottom: 4px;
+}
+
+.subtitulo {
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+/* ===== CARDS DE RESUMO ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.card {
+  background-color: #f2f2f2; /* cinza-claro */
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 0.85rem;
+  color: #555555;
+  font-weight: normal;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
+/* ===== TABELA ===== */
+.tabela-container {
+  overflow-x: auto; /* permite rolar no celular */
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* garante que a tabela não fique espremida */
+  font-size: 0.95rem;
+}
+
+thead {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+th, td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Destaque para situações */
+.situacao-bom {
+  color: #2e7d32; /* verde discreto */
+  font-weight: bold;
+}
+
+.situacao-atencao {
+  color: #c62828; /* vermelho discreto */
+  font-weight: bold;
+}
+
+.situacao-sem-nota {
+  color: #777777;
+  font-style: italic;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+  .cabecalho h1 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 1.2rem;
+  }
+}
