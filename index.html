@@ -12,51 +12,75 @@
   <!-- CABEÇALHO -->
   <header class="cabecalho">
     <h1>Boletim Digital</h1>
-    <p class="subtitulo">8º Ano</p>
+    <p class="subtitulo">8º Ano — Turma 8C — Nº 01</p>
   </header>
 
-  <!-- CARDS DE RESUMO -->
-  <section class="cards">
-    <div class="card">
-      <h2>Média geral</h2>
-      <p id="media-geral">—</p>
+  <!-- ÁREA DE ACESSO POR PIN -->
+  <section class="acesso" id="acesso">
+    <h2>Acesso ao Boletim</h2>
+    <p class="acesso-info">8º Ano — Turma 8C — Nº 01</p>
+    <div class="acesso-form">
+      <label for="campo-pin">PIN</label>
+      <input type="password" id="campo-pin" inputmode="numeric" autocomplete="off" placeholder="Digite seu PIN" />
+      <button id="btn-entrar" type="button">Entrar</button>
     </div>
-    <div class="card">
-      <h2>Total de faltas</h2>
-      <p id="total-faltas">—</p>
-    </div>
-    <div class="card">
-      <h2>Bom desempenho</h2>
-      <p id="qtd-bom">—</p>
-    </div>
-    <div class="card">
-      <h2>Precisam de atenção</h2>
-      <p id="qtd-atencao">—</p>
-    </div>
-    <div class="card">
-      <h2>Frequência</h2>
-      <p id="frequencia">—</p>
-    </div>
+    <p id="acesso-status" class="acesso-status" role="status"></p>
   </section>
 
-  <!-- TABELA DE DISCIPLINAS -->
-  <section class="tabela-container">
-    <table>
-      <thead>
-        <tr>
-          <th>Disciplina</th>
-          <th>1º Tri</th>
-          <th>2º Tri</th>
-          <th>3º Tri</th>
-          <th>Média</th>
-          <th>Faltas</th>
-          <th>Situação</th>
-        </tr>
-      </thead>
-      <!-- O JavaScript vai preencher o corpo da tabela -->
-      <tbody id="corpo-tabela"></tbody>
-    </table>
-  </section>
+  <!-- CONTEÚDO DO BOLETIM (oculto até entrar) -->
+  <div id="conteudo-boletim" class="conteudo-boletim" hidden>
+
+    <!-- BOTÃO ALTERAR DADOS -->
+    <div class="barra-acoes">
+      <button id="btn-alterar" type="button">Alterar dados</button>
+      <button id="btn-salvar" type="button" hidden>Salvar alterações</button>
+      <span id="status-salvar" class="status-salvar" role="status"></span>
+    </div>
+
+    <!-- CARDS DE RESUMO -->
+    <section class="cards">
+      <div class="card">
+        <h2>Média geral</h2>
+        <p id="media-geral">—</p>
+      </div>
+      <div class="card">
+        <h2>Total de faltas</h2>
+        <p id="total-faltas">—</p>
+      </div>
+      <div class="card">
+        <h2>Bom desempenho</h2>
+        <p id="qtd-bom">—</p>
+      </div>
+      <div class="card">
+        <h2>Precisam de atenção</h2>
+        <p id="qtd-atencao">—</p>
+      </div>
+      <div class="card">
+        <h2>Frequência</h2>
+        <p id="frequencia">—</p>
+      </div>
+    </section>
+
+    <!-- TABELA DE DISCIPLINAS -->
+    <section class="tabela-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Disciplina</th>
+            <th>1º Tri</th>
+            <th>2º Tri</th>
+            <th>3º Tri</th>
+            <th>Média</th>
+            <th>Faltas</th>
+            <th>Situação</th>
+          </tr>
+        </thead>
+        <!-- O JavaScript vai preencher o corpo da tabela -->
+        <tbody id="corpo-tabela"></tbody>
+      </table>
+    </section>
+
+  </div>
 
   <script src="script.js"></script>
 </body>

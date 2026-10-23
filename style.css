@@ -125,3 +125,191 @@ tbody tr:hover {
     font-size: 1.2rem;
   }
 }
+
+/* =========================================================
+   ACRÉSCIMOS — ACESSO POR PIN E EDIÇÃO
+   (mantendo o mesmo visual claro / escuro do projeto)
+   ========================================================= */
+
+/* Área de acesso por PIN */
+.acesso {
+  background-color: #f2f2f2;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.acesso h2 {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+.acesso-info {
+  font-size: 0.9rem;
+  color: #555555;
+  margin-bottom: 16px;
+}
+
+.acesso-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.acesso-form label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #555555;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.acesso-form input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  width: 160px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.acesso-form input:focus {
+  outline: none;
+  border-color: #1a1a1a;
+}
+
+.acesso-form button {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.acesso-form button:hover {
+  background-color: #333333;
+}
+
+.acesso-form button:disabled {
+  background-color: #777777;
+  cursor: not-allowed;
+}
+
+.acesso-status {
+  margin-top: 14px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #c62828;
+  min-height: 1.2em;
+}
+
+/* Conteúdo do boletim após login */
+.conteudo-boletim {
+  /* herdado do layout original */
+}
+
+/* Barra de ações (Alterar / Salvar) */
+.barra-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.barra-acoes button {
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#btn-alterar {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+#btn-alterar:hover {
+  background-color: #333333;
+}
+
+#btn-salvar {
+  background-color: #2e7d32;
+  color: #ffffff;
+}
+
+#btn-salvar:hover {
+  background-color: #256428;
+}
+
+#btn-salvar:disabled {
+  background-color: #777777;
+  cursor: not-allowed;
+}
+
+.status-salvar {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #2e7d32;
+  min-height: 1.2em;
+}
+
+/* Campos de edição dentro da tabela */
+.campo-edicao {
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 6px 8px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  width: 70px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+.campo-edicao:focus {
+  outline: none;
+  border-color: #1a1a1a;
+}
+
+.campo-edicao.invalido {
+  border-color: #c62828;
+  background-color: #fdecea;
+}
+
+/* Mensagem de erro por campo */
+.erro-campo {
+  display: block;
+  font-size: 0.7rem;
+  color: #c62828;
+  font-weight: normal;
+  margin-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .acesso {
+    padding: 16px;
+  }
+
+  .acesso-form input {
+    width: 120px;
+  }
+
+  .campo-edicao {
+    width: 60px;
+  }
+}
